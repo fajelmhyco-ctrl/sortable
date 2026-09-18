@@ -1,4 +1,4 @@
-var musicFolder = "Music";
+var musicFolder = "Music/";
 var mp3Extension = /\.mp3$/i;
 var playlist = [];
 var currentTrackIndex = -1;
