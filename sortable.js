@@ -163,7 +163,7 @@ audioPlayer.addEventListener("ended", playNext);
 audioPlayer.addEventListener("play", function () { playButton.textContent = "❚❚"; });
 audioPlayer.addEventListener("pause", function () { playButton.textContent = "▶"; });
 
-$(playlistElement).sortable({
+$(playlistElement).index({
     handle: ".handle",
     axis: "y",
     cursor: "grabbing",
