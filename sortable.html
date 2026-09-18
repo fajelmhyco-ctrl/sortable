@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sortable Activity</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+  </head>
+  <body>
+    <div class="layout">
+      <div class="player">
+        <div class="cover" id="cover">🎵</div>
+        <h1 class="title" id="title">Nothing playing</h1>
+        <p class="artist" id="artist">Pick a track below</p>
+
+        <div class="seek-wrap">
+          <span id="currentTime">0:00</span>
+          <input type="range" id="seek" min="0" max="100" value="0" step="0.1" />
+          <span id="totalTime">0:00</span>
+        </div>
+
+        <div class="controls">
+          <button class="btn" id="previousButton" title="Previous">⏮</button>
+          <button class="btn btn-play" id="playButton" title="Play/Pause">▶</button>
+          <button class="btn" id="nextButton" title="Next">⏭</button>
+        </div>
+      </div>
+
+      <div class="playlist-panel">
+        <div class="playlist-head">
+          <h2>Playlist</h2>
+          <span id="trackCount"></span>
+        </div>
+        <ul class="playlist" id="playlist"></ul>
+        <div class="status" id="status">Scanning Music/ …</div>
+      </div>
+    </div>
+
+    <audio id="audio"></audio>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script src="sortable.js"></script>
+  </body>
+</html>
